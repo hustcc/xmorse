@@ -1,0 +1,45 @@
+{
+  "name": "xmorse",
+  "officialName": "xmorse",
+  "version": "0.0.1",
+  "summary": "xmorse is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.",
+  "description": "xmorse is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.",
+  "author": {
+    "name": "hustcc",
+    "url": "http://git.hust.cc/xmorse"
+  },
+  "license": "MIT",
+  "keywords": [
+    "morse",
+    "mor",
+    "morse code",
+    "morse encode",
+    "morse decode",
+    "unicode morse",
+    "中文morse"
+  ],
+  "main": "dist/xmorse.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hustcc/xmorse"
+  },
+  "bugs": {
+    "url": "https://github.com/hustcc/xmorse/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-inject-version": "^1.0.1",
+    "tape": "^4.6.2",
+    "casual": "^1.5.8"
+  },
+  "scripts": {
+    "lint": "jshint src/xmorse.js",
+    "test": "npm run lint && node tests/test.js",
+    "build": "gulp mini && npm run test"
+  },
+  "dependencies": {
+  }
+}

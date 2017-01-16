@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>xmorse is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.</title>
+  <meta name="keywords" content="morse encode, morse decode, morse unicode" />
+  <meta name="description" content="xmorse is a pure JavaScript library for encoding/decoding morse code messages, unicode supported." />
+  <style type="text/css">
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  pre {
+    background-color: #f6dcd7;
+    padding: 10px 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  pre.strong {
+    font-weight: bold;
+  }
+  form, form textarea {
+    width: 100%;
+  }
+  </style>
+</head>
+<body>
+  <h1> xmorse </h1>
+  <p>
+    Project <a href="https://github.com/hustcc/xmorse">xmorse</a> is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.
+  </p>
+
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- sorry for ad -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7292810486004926"
+       data-ad-slot="7806394673"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <form>
+    <textarea rows='10' id='input'>I love you, 我爱你。</textarea>
+    <br />
+    <input type='button' onclick='encode()' value='Encode morse code' />
+    <input type='button' onclick='decode()' value='Decode morse code' />
+  </form>
+  <pre id='result'></pre>
+
+  <h2> Install </h2>
+  <pre class="strong">
+npm install xmorse </pre>
+  <p> Then import it. </p>
+  <pre>
+// import library use script tag.
+&lt;script type="text/javascript" src="dist/xmorse.min.js"&gt;&lt;/script&gt;
+
+// or ES6 style.
+var WordWidth = require('xmorse');</pre>
+
+  <h3>Usage</h3>
+  <pre>
+xmorse.encode('Hello, Xmorse!');
+// unicode
+xmorse.encode('コンニチハ, セカイ!');
+xmorse.encode('越过长城，走向世界');
+
+xmorse.decode('../.-../---');
+  </pre>
+  <hr />
+
+  <p>
+    The code of xmorse hosted on Github, click <a href="https://github.com/hustcc/xmorse">here</a>. Welcome to issue or pull request.
+  </p>
+  <script type="text/javascript" src="dist/xmorse.min.js"></script>
+  <script type="text/javascript">
+    function $_(id) {
+      return document.getElementById(id);
+    }
+    function encode() {
+      $_('result').innerHTML = xmorse.encode($_('input').value);
+    }
+    function decode() {
+      $_('result').innerHTML = xmorse.decode($_('input').value);
+    }
+  </script>
+</body>
+</html>
