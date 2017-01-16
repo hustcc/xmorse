@@ -1,27 +1,28 @@
 # Xmorse
 
-> **Xmorse** is a pure javascript(~1.4kb) library for encoding / decoding morse code messages, **unicode supported**.
+> **Xmorse** 是一个纯 JavaScript 开发仅仅只有 1.4kb 的摩斯密码库，支持浏览器端和 nodejs，支持 unicode 字符串，支持中文 morse 密码编码。
 
-[中文说明文档](README_ZH.md) | [Online DEMO 地址](http://git.hust.cc/xmorse/) 
+[English Document](README.md) | [在线 DEMO 地址](http://git.hust.cc/xmorse/) 
 
 [![Build Status](https://travis-ci.org/hustcc/xmorse.svg?branch=master)](https://travis-ci.org/hustcc/xmorse) [![npm](https://img.shields.io/npm/v/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/dt/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/l/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse)
 
 
-# 1. Install
+# 1. 下载安装
 
 > **npm install xmorse**
 
-Or download `dist/xmorse.min.js` source file。
+或者直接下载 `dist/xmorse.min.js` 文件。
 
-# 2. Import It
 
- - `Script` tag.
+# 2. 引入库
+
+ - `script` 标签引入.
 
 ```html
 <script type="text/javascript" src="dist/xmorse.min.js"></script>
 ```
 
- - `ES6` style.
+ - `require` 语法风格.
 
 ```js
 var xmorse = require('xmorse');
@@ -32,35 +33,35 @@ import xmorse from 'xmorse';
 ```
 
 
-# 3. Usage & API
+# 3. 使用 & API 接口
 
-There is only 2 API named `encode`, `decode`.
+这个库仅仅只有两个 API 方法，分别为： `encode`，`decode`。
 
-For `encode(msg)`, example:
+对于 API `encode(msg)`，例子如下：
 
 ```js
-// standart morse
+// 编码标准 摩斯密码
 xmorse.encode('Hello, Xmorse!');
   
-// unicode
+// 对于 unicode 编码
 xmorse.encode('コンニチハ, セカイ!');
 xmorse.encode('越过长城，走向世界');
 ```
 
-For `decode(morse)`, example:
+对于 API `decode(morse)`，例子如下：
 
 ```js
 xmorse.decode('../.-../---/...-/./-.--/---/..-/-/---/---/--...-....-...-/-..---..-.-----/---..-...--...-/-..----.--.....');
 ```
 
 
-# 4. Test
+# 4. 测试开发
 
 > npm install
 > 
 > npm test
 
 
-# 5. LICENSE
+# 5. 开源协议
 
 MIT@[hustcc](https://github.com/hustcc)
