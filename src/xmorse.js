@@ -2,7 +2,7 @@
  * Copyright (c) 2017 hustcc
  * License: MIT
  * Version: %%GULP_INJECT_VERSION%%
- * GitHub: https://github.com/hustcc/xmorse.js
+ * GitHub: https://github.com/hustcc/xmorse
 **/
 /* jshint expr: true */
 !function (root, factory) {
