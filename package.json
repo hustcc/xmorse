@@ -1,9 +1,9 @@
 {
   "name": "xmorse",
   "officialName": "xmorse",
-  "version": "0.0.1",
-  "summary": "xmorse is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.",
-  "description": "xmorse is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.",
+  "version": "0.0.2",
+  "summary": "xmorse is a pure javascript(~1.4kb) library for encode / decode morse code messages, unicode supported.",
+  "description": "xmorse is a pure javascript(~1.4kb) library for encode / decode morse code messages, unicode supported.",
   "author": {
     "name": "hustcc",
     "url": "http://git.hust.cc/xmorse"
@@ -16,7 +16,8 @@
     "morse encode",
     "morse decode",
     "unicode morse",
-    "中文morse"
+    "中文morse",
+    "中文摩斯密码"
   ],
   "main": "dist/xmorse.min.js",
   "repository": {

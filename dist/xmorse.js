@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2017 hustcc
  * License: MIT
- * Version: v0.0.1
+ * Version: v0.0.2
  * GitHub: https://github.com/hustcc/xmorse
 **/
 /* jshint expr: true */
@@ -106,8 +106,9 @@ function () {
 
   function morseHexUnicode(mor) {
     mor = mor.replace(/\./g, '0').replace(/\-/g, '1'); // 转二进制
-    mor = '%u' + parseInt(mor, 2).toString(16); // 转 16 进制 -> unicode
-    return unescape(mor); // unicode 转字符串
+    mor = parseInt(mor, 2); // 解析 2 进制数
+    if (isNaN(mor)) return ''; // 解析失败，直接返回空字符串跳过
+    return unescape('%u' + mor.toString(16)); // 转 16 进制 -> unicode -> unicode 转字符串
   }
 
   function decode(morse) {
