@@ -27,7 +27,10 @@
 <body>
   <h1> Xmorse </h1>
   <p>
-    Project <a href="https://github.com/hustcc/xmorse">xmorse</a> is a pure JavaScript library for encoding/decoding morse code messages, unicode supported.
+    Project <a href="https://github.com/hustcc/xmorse">xmorse</a> is a pure JavaScript (1.5 kb) library for encoding/decoding morse code messages, unicode supported.
+  </p>
+  <p>
+    项目 <a href="https://github.com/hustcc/xmorse">xmorse</a> 是一个 JavaScript 开发的摩斯密码编码库(1.5 kb)，可以支持 unicode，例如中文摩斯密码。
   </p>
 
   <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -43,6 +46,11 @@
 
   <form>
     <textarea rows='10' id='input'>I love you, 我爱你。</textarea>
+    <br />
+    Space: <input type='text' id='space' value='/' placeholder='space' />
+    Short: <input type='text' id='short' value='.' placeholder='short' />
+    Long: <input type='text' id='long' value='-' placeholder='long' />
+    <br />
     <br />
     <input type='button' onclick='encode()' value='Encode morse code' />
     <input type='button' onclick='decode()' value='Decode morse code' />
@@ -79,11 +87,18 @@ xmorse.decode('../.-../---');
     function $_(id) {
       return document.getElementById(id);
     }
+    function getoption() {
+      return {
+        space: $_('space').value,
+        short: $_('short').value,
+        long: $_('long').value,
+      };
+    }
     function encode() {
-      $_('result').innerHTML = xmorse.encode($_('input').value);
+      $_('result').innerHTML = xmorse.encode($_('input').value, getoption());
     }
     function decode() {
-      $_('result').innerHTML = xmorse.decode($_('input').value);
+      $_('result').innerHTML = xmorse.decode($_('input').value, getoption());
     }
   </script>
 </body>

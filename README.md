@@ -1,6 +1,6 @@
 # Xmorse
 
-> **Xmorse** is a pure javascript(~1.4kb) library for encoding / decoding morse code messages, **unicode supported**.
+> **Xmorse** is a pure javascript(~1.5kb) library for encoding / decoding morse code messages, **unicode supported**.
 
 [中文说明文档](README_ZH.md) | [Online DEMO 地址](http://git.hust.cc/xmorse/) 
 
@@ -36,7 +36,7 @@ import xmorse from 'xmorse';
 
 There is only 2 API named `encode`, `decode`.
 
-For `encode(msg)`, example:
+For `encode(msg, [option])`, example:
 
 ```js
 // standart morse
@@ -45,12 +45,28 @@ xmorse.encode('Hello, Xmorse!');
 // unicode
 xmorse.encode('コンニチハ, セカイ!');
 xmorse.encode('越过长城，走向世界');
+
+// option
+var option = {
+  space: ' ',
+  long: '-',
+  short: '*'
+};
+xmorse.encode('越过长城，走向世界', option);
 ```
 
-For `decode(morse)`, example:
+For `decode(morse, [option])`, example:
 
 ```js
 xmorse.decode('../.-../---/...-/./-.--/---/..-/-/---/---/--...-....-...-/-..---..-.-----/---..-...--...-/-..----.--.....');
+
+// option
+var option = {
+  space: ' ',
+  long: '-',
+  short: '*'
+};
+xmorse.decode('*-** --- ***- *', option);
 ```
 
 

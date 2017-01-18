@@ -82,5 +82,15 @@ test('xmorse code test', function (t) {
     w = casual.sentence;
     t.equal(w.replace(/\s+/g, '').toLocaleUpperCase(), xmorse.decode(xmorse.encode(w)), 'random sentence `' + w + '`');
   }
+  
+  // test options
+  var option = {
+    space: ' ',
+    long: '-',
+    short: '*'
+  };
+  t.equal(xmorse.encode('I love you. 我爱你', option), '** *-** --- ***- * -*-- --- **- *-*-*- --***-****-***- ---**-***--***- -**----*--*****');
+  t.equal(xmorse.decode('** *-** --- ***- * -*-- --- **- *-*-*- --***-****-***- ---**-***--***- -**----*--*****', option), 'ILOVEYOU.我爱你');
+
   t.end();
 });
