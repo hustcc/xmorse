@@ -98,7 +98,7 @@ xmorse.decode('../.-../---');
       $_('result').innerHTML = xmorse.encode($_('input').value, getoption());
     }
     function decode() {
-      $_('result').innerHTML = xmorse.decode($_('input').value, getoption());
+      $_('result').innerHTML = xmorse.decode($_('input').value, getoption()) || 'Morse code is not valid.';
     }
   </script>
 </body>
