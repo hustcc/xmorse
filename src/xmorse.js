@@ -6,8 +6,10 @@
 **/
 /* jshint expr: true */
 !function (root, factory) {
-  if (typeof module === 'object' && module.exports)
-    module.exports = factory();
+  if (typeof module === 'object' && module.exports) {
+    module.exports = factory(root); // nodejs support
+    module.exports['default'] = module.exports; // es6 support
+  }
   else
     root.xmorse = factory();
 }(typeof window !== 'undefined' ? window : this, 

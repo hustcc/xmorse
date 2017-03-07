@@ -1,13 +1,15 @@
 /**
  * Copyright (c) 2017 hustcc
  * License: MIT
- * Version: v0.0.3
+ * Version: v0.0.4
  * GitHub: https://github.com/hustcc/xmorse
 **/
 /* jshint expr: true */
 !function (root, factory) {
-  if (typeof module === 'object' && module.exports)
-    module.exports = factory();
+  if (typeof module === 'object' && module.exports) {
+    module.exports = factory(root); // nodejs support
+    module.exports['default'] = module.exports; // es6 support
+  }
   else
     root.xmorse = factory();
 }(typeof window !== 'undefined' ? window : this, 
