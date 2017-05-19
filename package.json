@@ -28,19 +28,23 @@
     "url": "https://github.com/hustcc/xmorse/issues"
   },
   "devDependencies": {
+    "casual": "^1.5.8",
+    "coveralls": "^2.13.1",
     "gulp": "^3.9.0",
-    "gulp-uglify": "^2.0.0",
-    "jshint": "^2.9.2",
-    "gulp-rename": "^1.2.2",
     "gulp-inject-version": "^1.0.1",
-    "tape": "^4.6.2",
-    "casual": "^1.5.8"
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.2",
+    "mocha": "^3.4.1",
+    "mocha-lcov-reporter": "^1.3.0"
   },
   "scripts": {
     "lint": "jshint src/xmorse.js",
-    "test": "npm run lint && node tests/test.js",
+    "test": "npm run lint && mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "build": "gulp mini && npm run test"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
