@@ -92,5 +92,11 @@ test('xmorse code test', function (t) {
   t.equal(xmorse.encode('I love you. 我爱你', option), '** *-** --- ***- * -*-- --- **- *-*-*- --***-****-***- ---**-***--***- -**----*--*****');
   t.equal(xmorse.decode('** *-** --- ***- * -*-- --- **- *-*-*- --***-****-***- ---**-***--***- -**----*--*****', option), 'ILOVEYOU.我爱你');
 
+  option = {
+    space: ' '
+  }
+
+  t.equal(xmorse.encode('Hello', option), '.... . .-.. .-.. ---');
+  t.equal(xmorse.decode('.... . .-.. .-.. ---', option), 'HELLO');
   t.end();
 });

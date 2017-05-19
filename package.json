@@ -1,7 +1,7 @@
 {
   "name": "xmorse",
   "officialName": "xmorse",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "summary": "xmorse is a pure javascript(~1.5 kb) library for encode / decode morse code messages, unicode supported.",
   "description": "xmorse is a pure javascript(~1.5 kb) library for encode / decode morse code messages, unicode supported.",
   "author": {
