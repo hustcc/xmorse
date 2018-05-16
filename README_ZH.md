@@ -2,7 +2,7 @@
 
 > **Xmorse** 是一个纯 JavaScript 开发仅仅只有 1.5kb 的摩斯密码库，支持浏览器端和 nodejs，支持 unicode 字符串，支持中文 morse 密码编码。
 
-[English Document](README.md) | [在线 DEMO 地址](http://git.hust.cc/xmorse/) 
+[English Document](README.md) | [在线 DEMO 地址](https://atool.vip/#/morse) 
 
 [![Build Status](https://travis-ci.org/hustcc/xmorse.svg?branch=master)](https://travis-ci.org/hustcc/xmorse) [![Coverage Status](https://coveralls.io/repos/github/hustcc/xmorse/badge.svg?branch=master)](https://coveralls.io/github/hustcc/xmorse?branch=master) [![npm](https://img.shields.io/npm/v/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/dt/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/l/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse)
 
