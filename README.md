@@ -2,7 +2,7 @@
 
 > **Xmorse** is a pure javascript(~1.5kb) library for encoding / decoding morse code messages, **unicode supported**.
 
-[中文说明文档](README_ZH.md) | [Online DEMO 地址](http://git.hust.cc/xmorse/) 
+[中文说明文档](README_ZH.md) | [Online DEMO 地址](https://atool.vip/#/morse) 
 
 [![Build Status](https://travis-ci.org/hustcc/xmorse.svg?branch=master)](https://travis-ci.org/hustcc/xmorse) [![Coverage Status](https://coveralls.io/repos/github/hustcc/xmorse/badge.svg?branch=master)](https://coveralls.io/github/hustcc/xmorse?branch=master) [![npm](https://img.shields.io/npm/v/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/dt/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/l/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse)
 
