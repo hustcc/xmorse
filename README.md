@@ -2,9 +2,13 @@
 
 > **Xmorse** is a pure javascript(~1.5kb) library for encoding / decoding morse code messages, **unicode supported**.
 
-[中文说明文档](README_ZH.md) | [Online DEMO 地址](https://atool.vip/#/morse) 
+[中文说明文档](README_ZH.md) | [Online DEMO 地址](https://atool.vip/morse) 
 
-[![Build Status](https://travis-ci.org/hustcc/xmorse.svg?branch=master)](https://travis-ci.org/hustcc/xmorse) [![Coverage Status](https://coveralls.io/repos/github/hustcc/xmorse/badge.svg?branch=master)](https://coveralls.io/github/hustcc/xmorse?branch=master) [![npm](https://img.shields.io/npm/v/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/dt/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse) [![npm](https://img.shields.io/npm/l/xmorse.svg?style=flat-square)](https://www.npmjs.com/package/xmorse)
+[![Build Status](https://github.com/hustcc/xmorse/workflows/build/badge.svg)](https://github.com/hustcc/xmorse/actions)
+[![Coverage Status](https://coveralls.io/repos/github/hustcc/xmorse/badge.svg?branch=master)](https://coveralls.io/github/hustcc/xmorse?branch=master)
+[![npm](https://img.shields.io/npm/v/xmorse.svg)](https://www.npmjs.com/package/xmorse)
+[![npm](https://img.shields.io/npm/dm/xmorse.svg)](https://www.npmjs.com/package/xmorse)
+[![npm](https://img.shields.io/npm/l/xmorse.svg)](https://www.npmjs.com/package/xmorse)
 
 
 # 1. Install
@@ -23,58 +27,56 @@ Or download `dist/xmorse.min.js` source file。
 
  - `ES6` style.
 
-```js
-var xmorse = require('xmorse');
-
-//or
-
-import xmorse from 'xmorse';
+```ts
+import { decode, encode } from 'xmorse';
 ```
 
 
 # 3. Usage & API
 
-There is only 2 API named `encode`, `decode`.
+There is only 2 API named `encode`, `decode`. For `encode(msg, [option])`, example:
 
-For `encode(msg, [option])`, example:
-
-```js
+```ts
+import { decode, encode } from 'xmorse';
 // standart morse
-xmorse.encode('Hello, Xmorse!');
+encode('Hello, Xmorse!');
   
 // unicode
-xmorse.encode('コンニチハ, セカイ!');
-xmorse.encode('越过长城，走向世界');
+encode('コンニチハ, セカイ!');
+encode('越过长城，走向世界');
 
 // option
-var option = {
+const option = {
   space: ' ',
   long: '-',
   short: '*'
 };
-xmorse.encode('越过长城，走向世界', option);
+encode('越过长城，走向世界', option);
 ```
 
 For `decode(morse, [option])`, example:
 
-```js
-xmorse.decode('../.-../---/...-/./-.--/---/..-/-/---/---/--...-....-...-/-..---..-.-----/---..-...--...-/-..----.--.....');
+```ts
+import { decode, encode } from 'xmorse';
+decode('../.-../---/...-/./-.--/---/..-/-/---/---/--...-....-...-/-..---..-.-----/---..-...--...-/-..----.--.....');
 
 // option
-var option = {
+const option = {
   space: ' ',
   long: '-',
   short: '*'
 };
-xmorse.decode('*-** --- ***- *', option);
+decode('*-** --- ***- *', option);
 ```
 
 
 # 4. Test
 
-> npm install
-> 
-> npm test
+```bash
+$npm install
+
+$npm test
+```
 
 
 # 5. LICENSE

@@ -1,4 +1,21 @@
-.project
-.settings
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Sys
+.DS_STORE
+.idea
+
+# Node
+node_modules/
+
+# Build
+lib
+esm
+
+# Test
 coverage
-node_modules/*
