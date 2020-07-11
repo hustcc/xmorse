@@ -4,7 +4,7 @@ import { Option } from './types';
 function morseHexUnicode(mor) {
   mor = parseInt(mor, 2); // 解析 2 进制数
   if (isNaN(mor)) return ''; // 解析失败，直接返回空字符串跳过
-  return unescape('%u' + mor.toString(16)); // 转 16 进制 -> unicode -> unicode 转字符串
+  return String.fromCharCode(mor); // 转 10 进制 -> unicode 转字符串
 }
 /**
  * decode: encode string to morse code.
